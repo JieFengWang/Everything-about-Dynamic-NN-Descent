@@ -1,5 +1,6 @@
 
 *key*
+*.DS_Store
 
 # Prerequisites
 *.d
