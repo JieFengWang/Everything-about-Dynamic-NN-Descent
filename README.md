@@ -1,6 +1,6 @@
 # Everything-about-Dynamic-NN-Descent
 
-> This is the official repository of `Dynamic NN-Descent`.
+> This is the official repository of [`Dynamic NN-Descent`](https://ieeexplore.ieee.org/document/10679929).
 
 You will learn EVERYTHING relative to Dynamic NN-Descent once from this repository.
 
