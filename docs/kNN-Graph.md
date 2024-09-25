@@ -6,6 +6,9 @@ Without loss of generality, consider a dataset C = \{x_i | x_i \in \mathbb{R}^d\
 ![](./../figs/real_knn.jpg)
 
 ## Representation by 2D C++ Vector
+
+*k*-NN graph can be represented by a 2D vector with C++. 
+
 ```cpp
 #include <iostream>
 #include <vector>
