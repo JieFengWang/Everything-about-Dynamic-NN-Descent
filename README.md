@@ -4,6 +4,10 @@
 
 You will learn EVERYTHING relative to Dynamic NN-Descent once from this repository.
 
-[The *k*-NN Graph](./docs/kNN-Graph.md)
-[NN-Descent (kgraph)](./docs/NN-Descent.md)
-[Dynamic NN-Descent](./docs/DynamicNNDescent.md)
+[1. The *k*-NN Graph](./docs/kNN-Graph.md)
+
+[2. NN-Descent (kgraph)](./docs/NN-Descent.md)
+
+[3. Dynamic NN-Descent](./docs/DynamicNNDescent.md)
+
+[4. Nearest Neighbor Search](./docs/NNSearch.md)
