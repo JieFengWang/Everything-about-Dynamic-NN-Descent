@@ -6,4 +6,11 @@ The Nearest Neighbor Descent (NN-Descent) algorithm is based on an intuitive hyp
 1. init a random k-NN graph
 2. NN-Descent (local-join & sampling)
 
+## C++ implementation key points
+
+1. Basic C++ Struct of a Node 
+2. Randomly generate a *k*-NN graph
+3. Sampling 
+4. Local-join
+
 ## Memory Consumption Analysis 
