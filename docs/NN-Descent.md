@@ -5,3 +5,5 @@ The Nearest Neighbor Descent (NN-Descent) algorithm is based on an intuitive hyp
 
 1. init a random k-NN graph
 2. NN-Descent (local-join & sampling)
+
+## Memory Consumption Analysis 
