@@ -10,6 +10,8 @@ The Nearest Neighbor Descent (NN-Descent) algorithm is based on an intuitive hyp
 
 1. Basic C++ Struct of a Node 
 
+Since the k-NN points should be sorted by distances, and has a `new/old` attribute for local-join, the basic `Node` can be defined as below.
+
 ```cpp
 #include <iostream>
 #include <limits>
