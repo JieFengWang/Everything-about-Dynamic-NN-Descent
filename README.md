@@ -4,7 +4,7 @@
 > 
 > Over 85% extra memory and 30% time costs are saved by `Dynamic NN-Descent` compared to [`NN-Descent`](https://github.com/aaalgo/kgraph).
 
-You will learn EVERYTHING about Dynamic NN-Descent ONCE and with CODE here.
+You will learn EVERYTHING about Dynamic NN-Descent ONCE and with C++ here.
 
 [1. The *k*-NN Graph](./docs/kNN-Graph.md)
 
