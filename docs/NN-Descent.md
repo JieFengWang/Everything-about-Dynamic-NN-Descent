@@ -1,1 +1,7 @@
+## Summary
 The Nearest Neighbor Descent (NN-Descent) algorithm is based on an intuitive hypothesis—“the neighbors of neighbors are likely to also be neighbors.” The algorithm starts with a randomly generated low-quality k-nearest neighbor graph and gradually improves the quality of the graph through an iterative process. In each iteration, distances between nodes in the neighbor lists are computed pairwise, and attempts are made to insert each other into the respective neighbor lists; this step is known as "local-join." Suppose node i has two neighbor nodes u and v; after local-join, two new directed edges, <u, v> and <v, u>, will be created. If the new edge <u, v> is shorter than the longest edge in node u's k-nearest neighbor list, then node v can be inserted into node u's k-nearest neighbor list, and vice versa. As new edges are continuously inserted, the quality of the k-nearest neighbor graph gradually improves until convergence.
+
+## Explain in detail
+
+1. init a random k-NN graph
+2. NN-Descent (local-join & sampling)
