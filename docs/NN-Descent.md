@@ -9,6 +9,59 @@ The Nearest Neighbor Descent (NN-Descent) algorithm is based on an intuitive hyp
 ## C++ implementation key points
 
 1. Basic C++ Struct of a Node 
+
+```cpp
+#include <iostream>
+#include <limits>
+
+struct Node {
+    float dist;
+    unsigned idx;
+    bool is_new;
+
+    // Default constructor
+    Node() : dist(std::numeric_limits<float>::max()), idx(0), is_new(true) {}
+
+    // Comparison operators
+    bool operator<(const Node& other) const { return dist < other.dist; }
+    bool operator>(const Node& other) const { return dist > other.dist; }
+    
+    // Updated operator<= to check for equal distance and smaller index
+    bool operator<=(const Node& other) const {
+        return (dist == other.dist && idx < other.idx) || (dist < other.dist);
+    }
+
+    bool operator>=(const Node& other) const {
+        return (dist == other.dist && idx > other.idx) || (dist > other.dist);
+    }
+    
+    bool operator==(const Node& other) const {
+        return dist == other.dist && idx == other.idx;
+    }
+
+    // Setter methods
+    void setNew() { is_new = true; }
+    void setOld() { is_new = false; }
+
+    // Check if it's new
+    bool isNew() const { return is_new; }
+};
+
+int main() {
+    Node a;
+    Node b;
+    b.dist = 10.0f;
+    b.idx = 1;
+
+    std::cout << "Node a is new: " << a.isNew() << std::endl;
+    std::cout << "Node b distance: " << b.dist << std::endl;
+    std::cout << "Comparison a < b: " << (a < b) << std::endl;
+    std::cout << "Comparison a <= b: " << (a <= b) << std::endl;
+
+    return 0;
+}
+```
+
 2. Randomly generate a *k*-NN graph
 3. Sampling 
 4. Local-join
