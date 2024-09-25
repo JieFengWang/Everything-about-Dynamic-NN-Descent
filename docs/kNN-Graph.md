@@ -3,7 +3,7 @@ Without loss of generality, consider a dataset C = \{x_i | x_i \in \mathbb{R}^d\
 
 ## Illustration of *k*-NN Graph
 
-
+![](./../figs/real_knn.jpg)
 
 ## Representation by 2D C++ Vector
 ```cpp
