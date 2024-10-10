@@ -13,24 +13,26 @@ Without loss of generality, consider a dataset C = \{x_i | x_i \in \mathbb{R}^d\
 #include <iostream>
 #include <vector>
 
+using Node = unsigned; // Define Node as an alias for unsigned
+
 int main() {
-    unsigned numPoints = 5; // Example number of points
-    unsigned k = 3; // Number of neighbors
+    Node numPoints = 5; // Example number of points
+    Node k = 3; // Number of neighbors
 
     // Create a 2D vector to hold the kNN graph
-    std::vector<std::vector<unsigned>> knnGraph(numPoints, std::vector<unsigned>(k));
+    std::vector<std::vector<Node>> knnGraph(numPoints, std::vector<Node>(k));
 
     // Example: Filling the kNN graph with dummy indices
-    for (unsigned i = 0; i < numPoints; ++i) {
-        for (unsigned j = 0; j < k; ++j) {
+    for (Node i = 0; i < numPoints; ++i) {
+        for (Node j = 0; j < k; ++j) {
             knnGraph[i][j] = (i + j + 1) % numPoints; // Dummy neighbors
         }
     }
 
     // Print the kNN graph
-    for (unsigned i = 0; i < numPoints; ++i) {
+    for (Node i = 0; i < numPoints; ++i) {
         std::cout << "Neighbors of point " << i << ": ";
-        for (unsigned j = 0; j < k; ++j) {
+        for (Node j = 0; j < k; ++j) {
             std::cout << knnGraph[i][j] << " ";
         }
         std::cout << std::endl;

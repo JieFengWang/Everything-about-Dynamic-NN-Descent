@@ -8,7 +8,7 @@ The Nearest Neighbor Descent (NN-Descent) algorithm is based on an intuitive hyp
 
 ## C++ implementation key points
 
-1. Basic C++ Struct of a Node 
+1. RE-organize the `Node` 
 
 Since the k-NN points should be sorted by distances, and has a `new/old` attribute for local-join, the basic `Node` can be defined as below.
 
@@ -65,7 +65,48 @@ int main() {
 ```
 
 2. Randomly generate a *k*-NN graph
-3. Sampling 
+
+   ```cpp
+   //* Given N and k, assign a part of memory to host the k-NN graph *//
+       const unsigned N = 5; // Example number of points
+       const unsigned k = 3; // Number of neighbors
+   
+       // Create a 2D vector to hold the kNN graph with Node type
+       std::vector<std::vector<Node>> knnGraph(N, std::vector<Node>(k));
+   
+   // Fill the k-NN graph with random id.
+       std::srand(static_cast<unsigned>(std::time(0)));
+   
+       for (unsigned i = 0; i < N; ++i) {
+           for (unsigned j = 0; j < k; ++j) {
+               unsigned random_id;
+               do {
+                   random_id = std::rand() % N; // Generate a random index
+               } while (random_id == i); // Ensure it's not equal to i
+               
+               float distance = calculateDistance(i, random_id); 
+               // Calculate distance between i and random_id
+               
+               knnGraph[i][j] = Node{distance, random_id, true}; 
+               // Assign node with calculated distance and random id
+           }
+       }
+   
+   // Sort the knn neighbors by distances
+   	for (unsigned i = 0; i < N; ++i) {
+           sort(knnGraph[i].begin(), knnGraph[i].end());
+       }
+   ```
+
+3. Sampling
+
+   If all $k$ neighbors 
+
+   ```cpp 
+   ```
+
+   
+
 4. Local-join
 
 ## Memory Consumption Analysis 
